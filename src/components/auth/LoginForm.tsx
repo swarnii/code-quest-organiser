@@ -109,8 +109,7 @@ const LoginForm = () => {
           </p>
         </CardFooter>
       </form>
-    </CardHeader>
-  </Card>
+    </Card>
   );
 };
 
