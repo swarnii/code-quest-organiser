@@ -14,6 +14,11 @@ import Dashboard from "./pages/Dashboard";
 import Leaderboard from "./pages/Leaderboard";
 import Unauthorized from "./pages/Unauthorized";
 import NotFound from "./pages/NotFound";
+import HackathonDetails from "./pages/HackathonDetails";
+import TeamsList from "./pages/TeamsList";
+import JoinTeam from "./pages/JoinTeam";
+import ProjectsList from "./pages/ProjectsList";
+import VotingPage from "./pages/VotingPage";
 
 const queryClient = new QueryClient();
 
@@ -46,10 +51,11 @@ const App = () => (
             
             {/* Participant routes */}
             <Route path="/hackathons" element={<Dashboard />} />
-            <Route path="/teams" element={<Dashboard />} />
-            <Route path="/join-team" element={<Dashboard />} />
-            <Route path="/projects" element={<Dashboard />} />
-            <Route path="/voting" element={<Dashboard />} />
+            <Route path="/hackathons/:id" element={<HackathonDetails />} />
+            <Route path="/teams" element={<TeamsList />} />
+            <Route path="/join-team" element={<JoinTeam />} />
+            <Route path="/projects" element={<ProjectsList />} />
+            <Route path="/voting" element={<VotingPage />} />
             
             {/* Settings & Profile */}
             <Route path="/settings" element={<Dashboard />} />
